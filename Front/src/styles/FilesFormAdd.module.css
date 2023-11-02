@@ -1,0 +1,84 @@
+/* FileFormAdd.module.css */
+
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ;
+  }
+  
+  .modalContent {
+    background-color: #323030;
+    padding: 20px;
+    border-radius: 8px;
+    width: 450px;
+    height: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    font-size: 16px;
+    color:  #fff;
+  }
+
+  input {
+    background-color: black;
+  }
+  
+  input, select {
+    padding: 8px;
+    font-size: 14px;
+    background-color: black;
+    text-decoration: solid;
+    color:  #fff;
+  }
+
+  input, select {
+    padding: 8px;
+    font-size: 14px;
+    background-color: black;
+    text-decoration: solid;
+    color:  #fff;
+    border: 1px solid white; 
+    
+    
+  }
+
+  input:focus,
+  select:focus {
+    padding: 8px;
+    font-size: 14px;
+    background-color: black;
+    border: 1px solid white; /* Ajoutez une bordure blanche à la place de text-decoration */
+    color: #fff;
+    outline: 2px solid blue; /* Ajoutez cette ligne pour styliser le focus (ring) */
+  }
+  
+ form button {
+    padding: 10px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  
+
+
+  h2{
+    color:  #fff;
+  }
+  

@@ -1,0 +1,87 @@
+
+ .filesList {
+  background-color: #1e1e1e;
+  height: 100vh;
+ }
+
+
+  .fileListContainer {
+    background-color: #1e1e1e; 
+    color: #ffffff; 
+    padding: 20px;
+    
+    
+  }
+
+
+  .folderEmpty{
+    text-align: center;
+  }
+
+  
+  
+  .createFileButton {
+    background-color: #4CAF50; 
+    color: #ffffff; 
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .fileList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .fileItem:hover {
+    transform: scale(0.9);
+  }
+  
+  .fileItem {
+    display: flex;
+    align-items: center;
+    border: 1px solid #333; /* Bordure des éléments de la liste */
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .fileIcon {
+    width: 30px;
+    height: 30px;
+    background-color: #2196F3; /* Couleur d'arrière-plan de l'icône */
+    margin-right: 10px;
+  }
+  
+  .fileName {
+    flex-grow: 1;
+    color: #ffffff; /* Couleur du texte du nom de fichier */
+  }
+  
+  .fileActions {
+    display: flex;
+  }
+  
+  /* Ajoutez des styles pour les boutons Télécharger et Supprimer */
+  .fileActions button {
+    margin-right: 10px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Ajoutez des styles pour le mode sombre */
+  @media (prefers-color-scheme: dark) {
+    .fileItem {
+      background-color: #333; 
+      border-color: #555; 
+    }
+  
+  }
+  
+  
+
+
+
+  
