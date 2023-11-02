@@ -1,0 +1,395 @@
+<!-- Documentation de l'Application de Gestion de Fichiers
+
+Table des matières
+Introduction
+Structure de l'Application
+2.1 Backend (Node.js avec TypeScript)
+2.1.1 Dossiers Principaux
+2.1.2 Méthodes Principales
+2.1.3 Bibliothèques Utilisées
+2.2 Frontend (React.js)
+2.2.1 Dossiers Principaux
+2.2.2 Méthodes Principales
+2.2.3 Bibliothèques Utilisées
+Ajouts au Frontend
+3.1 Dossiers Principaux
+3.2 Méthodes Principales
+3.2.1 Composants
+3.2.2 Fichiers de Style
+3.3 Bibliothèques Utilisées
+Utilisation
+Exécution
+1. Introduction <a name="introduction"></a>
+L'application de gestion de fichiers est une solution complète développée en utilisant Node.js, Express, TypeScript pour le backend, et React.js pour le frontend. Son objectif principal est de permettre la création, la liste, le téléchargement, et la suppression de fichiers dans différents formats à partir d'une fausse API.
+
+2. Structure de l'Application <a name="structure-de-lapplication"></a>
+2.1 Backend (Node.js avec TypeScript) <a name="backend-nodejs-avec-typescript"></a>
+2.1.1 Dossiers Principaux <a name="dossiers-principaux"></a>
+routes: Contient les fichiers de configuration des routes de l'application.
+controllers: Contient les contrôleurs qui gèrent la logique métier des routes.
+services: Contient les services qui implémentent la logique spécifique des fonctionnalités.
+2.1.2 Méthodes Principales <a name="méthodes-principales"></a>
+createFile (FileController): Permet de créer un fichier en fonction du type (CSV, XML, Excel) à partir des données d'une fausse API. Si le paramètre fileName est manquant, elle renvoie un message d'erreur.
+getFileList (FileController): Renvoie la liste de tous les fichiers créés jusqu'à présent.
+downloadFile (FileController): Permet de télécharger un fichier spécifique.
+deleteFile (FileController): Permet de supprimer un fichier spécifique.
+2.1.3 Bibliothèques Utilisées <a name="bibliothèques-utilisées"></a>
+Express: Utilisé pour la gestion des routes et des requêtes HTTP.
+Axios: Utilisé pour effectuer des requêtes HTTP vers la fausse API.
+fs: Module de gestion des fichiers intégré à Node.js.
+xmlbuilder: Utilisé pour la création de fichiers XML.
+exceljs: Utilisé pour la création de fichiers Excel.
+
+
+Ajouts au Frontend <a name="ajouts-au-frontend"></a>
+3.1 Dossiers Principaux <a name="dossiers-principaux-2"></a>
+components: Contient les composants React réutilisables.
+styles: Contient les fichiers de style CSS utilisés dans l'application.
+3.2 Méthodes Principales <a name="méthodes-principales-2"></a>
+3.2.1 Composants <a name="composants"></a>
+FileList (FileList.tsx): Affiche la liste des fichiers existants avec des boutons pour les supprimer ou les télécharger. Permet également de créer un nouveau fichier.
+FileFormAdd (FileFormAddComponent.tsx): Affiche un formulaire pour créer un nouveau fichier avec des champs pour le nom du fichier et le type de fichier (CSV, XML, Excel). Utilise différents fichiers de style pour illustrer la diversité des approches.
+3.2.2 Fichiers de Style <a name="fichiers-de-style"></a>
+FileList.css (FileList.css): Fichier de style pour le composant FileList.
+FileFormAddList.module.css (FileFormAddList.module.css): Module de style pour le composant FileFormAdd.
+3.3 Bibliothèques Utilisées <a name="bibliothèques-utilisées-2"></a>
+React: Bibliothèque de création d'interfaces utilisateur.
+Axios: Utilisé pour effectuer des requêtes HTTP vers le backend.
+sweetalert2: Utilisé pour la gestion des messages d'alerte.
+
+
+5. Exécution <a name="exécution"></a>
+
+Installer les dépendances du Backend:
+
+Assurez-vous d'avoir Node.js installé sur votre machine.
+Naviguez vers le dossier backend de l'application.
+Exécutez la commande suivante pour installer les dépendances:
+bash
+Copy code
+npm install
+Configurer le Backend:
+
+Assurez-vous de configurer les fichiers de configuration si nécessaire, tels que les paramètres de connexion à la fausse API.
+Lancer le Backend:
+
+Exécutez la commande suivante pour démarrer le serveur backend:
+bash
+Copy code
+npm start
+Installer les dépendances du Frontend:
+
+Naviguez vers le dossier frontend de l'application.
+Exécutez la commande suivante pour installer les dépendances:
+bash
+Copy code
+npm install
+Lancer le Frontend:
+
+Exécutez la commande suivante pour démarrer l'application frontend:
+bash
+Copy code
+npm start
+Accéder à l'Application:
+
+Ouvrez votre navigateur web et accédez à l'URL suivante:
+arduino
+Copy code
+http://localhost:3000
+Vous devriez maintenant pouvoir utiliser l'application de gestion de fichiers avec les fonctionnalités de création, gestion et téléchargement de fichiers dans différents formats.
+
+N'hésitez pas à ajuster les ports ou les configurations selon vos besoins spécifiques.
+
+
+
+4. Utilisation <a name="utilisation"></a>
+[Insérez ici des informations sur la manière d'utiliser l'application, les dépendances requises, etc.]
+
+
+Assurez-vous d'avoir Node.js installé sur votre machine.
+Vérifiez que les dépendances du backend et du frontend ont été installées en suivant les instructions de la section "Exécution" dans le fichier README.
+Configuration de l'Application:
+
+Explorez les dossiers backend et frontend pour ajuster les configurations si nécessaire, comme les paramètres de connexion à la fausse API dans le backend.
+Démarrage de l'Application:
+
+Suivez les instructions de la section "Exécution" pour lancer le backend et le frontend de l'application.
+Accéder à l'Interface Utilisateur:
+
+Ouvrez votre navigateur web et accédez à l'URL suivante:
+arduino
+Copy code
+http://localhost:3000
+Utiliser l'Application:
+
+Sur la page d'accueil, vous trouverez la liste des fichiers existants avec des options pour les supprimer ou les télécharger.
+Utilisez le formulaire sur la page pour créer un nouveau fichier. Remplissez les champs requis tels que le nom du fichier et le type de fichier (CSV, XML, Excel).
+Explorez les différentes façons d'utiliser les styles en examinant les fichiers de style fournis dans le dossier styles.
+Gestion des Messages d'Alerte:
+
+Les messages d'alerte sont gérés avec la bibliothèque sweetalert2. Soyez attentif aux messages d'alerte pour des actions spécifiques.
+Modification des Styles:
+
+Les styles CSS sont définis dans les fichiers FileList.css et FileFormAddList.module.css. Pour une démonstration, le fichier FileList.tsx utilise également un style en ligne défini dans la constante modalStyle.
+Personnalisation Additionnelle:
+
+Explorez le code source pour comprendre et personnaliser davantage l'application selon vos besoins spécifiques.
+N'hésitez pas à explorer, créer de nouveaux fichiers, télécharger, supprimer, et observer les différentes approches de styles utilisées dans l'application. -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation de l'Application de Gestion de Fichiers</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+        }
+
+         h1, h3 {
+            color: #333;
+        }
+
+        h2{
+            color: #007BFF;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        h3 {
+            margin-top: 15px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 3px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Documentation de l'Application de Gestion de Fichiers</h1>
+
+    <h2>Table des matières</h2>
+
+    <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#structure-de-lapplication">Structure de l'Application</a>
+            <ul>
+                <li><a href="#backend-nodejs-avec-typescript">Backend (Node.js avec TypeScript)</a>
+                    <ul>
+                        <li><a href="#dossiers-principaux">Dossiers Principaux</a></li>
+                        <li><a href="#méthodes-principales">Méthodes Principales</a></li>
+                        <li><a href="#bibliothèques-utilisées">Bibliothèques Utilisées</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#ajouts-au-frontend">Frontend (React.js avec TypeScript)</a>
+            <ul>
+                <li><a href="#dossiers-principaux-2">Dossiers Principaux</a></li>
+                <li><a href="#méthodes-principales-2">Méthodes Principales</a>
+                    <ul>
+                        <li><a href="#composants">Composants</a></li>
+                        <li><a href="#fichiers-de-style">Fichiers de Style</a></li>
+                    </ul>
+                </li>
+                <li><a href="#bibliothèques-utilisées-2">Bibliothèques Utilisées</a></li>
+            </ul>
+        </li>
+        <li><a href="#utilisation">Utilisation</a></li>
+        <li><a href="#exécution">Exécution</a></li>
+    </ul>
+
+    <h2><a name="introduction">1. Introduction</a></h2>
+    <p>L'application de gestion de fichiers est une solution complète développée en utilisant Node.js, Express, TypeScript pour le backend, 
+        et React.js, typescript pour le frontend...
+        APres avoir lancé l'application , il va directement creer un dossier appelé Folder pour stocker les fichiers qu'on va creer
+    </p>
+
+    
+
+    <h2>2 Backend (Node.js avec TypeScript) <a name="backend-nodejs-avec-typescript"></a></h2>
+
+    <h4>2.1. Dossiers Principaux <a name="dossiers-principaux"></a></h4>
+    <ul>
+        <li><strong>routes:</strong> Contient les fichiers de configuration des routes de l'application.</li>
+        <li><strong>controllers:</strong> Contient les contrôleurs qui gèrent la logique métier des routes.</li>
+        <li><strong>services:</strong> Contient les services qui implémentent la logique spécifique des fonctionnalités.</li>
+    </ul>
+
+    <h4>2.2 Méthodes Principales <a name="méthodes-principales"></a></h4>
+    <ul>
+        <li><strong>createFile (FileController):</strong> Permet de créer un fichier en fonction du type (CSV, XML, Excel) à partir des données d'une fausse API. Si le paramètre fileName est manquant, elle renvoie un message d'erreur.</li>
+        <li><strong>getFileList (FileController):</strong> Renvoie la liste de tous les fichiers créés jusqu'à présent.</li>
+        <li><strong>downloadFile (FileController):</strong> Permet de télécharger un fichier spécifique.</li>
+        <li><strong>deleteFile (FileController):</strong> Permet de supprimer un fichier spécifique.</li>
+    </ul>
+
+    <h4>2.3 Bibliothèques Utilisées <a name="bibliothèques-utilisées"></a></h4>
+    <ul>
+        <li><strong>Express:</strong> Utilisé pour la gestion des routes et des requêtes HTTP.</li>
+        <li><strong>Axios:</strong> Utilisé pour effectuer des requêtes HTTP vers la fausse API.</li>
+        <li><strong>fs:</strong> Module de gestion des fichiers intégré à Node.js.</li>
+        <li><strong>xmlbuilder:</strong> Utilisé pour la création de fichiers XML.</li>
+        <li><strong>exceljs:</strong> Utilisé pour la création de fichiers Excel.</li>
+    </ul>
+
+
+
+    <h2> 3  Frontend (React.js avec TypeScript) <a name="ajouts-au-frontend"></a></h2>
+
+    <h3>3.1 Dossiers Principaux <a name="dossiers-principaux-2"></a></h3>
+    <ul>
+        <li><strong>components:</strong> Contient les composants React réutilisables.</li>
+        <li><strong>styles:</strong> Contient les fichiers de style CSS utilisés dans l'application.</li>
+    </ul>
+
+    <h3>3.2 Méthodes Principales <a name="méthodes-principales-2"></a></h3>
+
+    <h4>3.2.1 Composants <a name="composants"></a></h4>
+    <ul>
+        <li><strong>FileList (FileList.tsx):</strong> Affiche la liste des fichiers existants avec des boutons pour les supprimer ou les télécharger. Permet également de créer un nouveau fichier.</li>
+        <li><strong>FileFormAdd (FileFormAddComponent.tsx):</strong> Affiche un formulaire pour créer un nouveau fichier avec des champs pour le nom du fichier et le type de fichier (CSV, XML, Excel). Utilise différents fichiers de style pour illustrer la diversité des approches.</li>
+    </ul>
+
+    <h4>3.2.2 Fichiers de Style <a name="fichiers-de-style"></a></h4>
+    <ul>
+        <li><strong>FileList.css (FileList.css):</strong> Fichier de style pour le composant FileList.</li>
+        <li><strong>FileFormAddList.module.css (FileFormAddList.module.css):</strong> Module de style pour le composant FileFormAdd.</li>
+    </ul>
+
+    <h4>3.3 Bibliothèques Utilisées <a name="bibliothèques-utilisées-2"></a></h4>
+    <ul>
+        <li><strong>React:</strong> Bibliothèque de création d'interfaces utilisateur.</li>
+        <li><strong>Axios:</strong> Utilisé pour effectuer des requêtes HTTP vers le backend.</li>
+        <li><strong>sweetalert2:</strong> Utilisé pour la gestion des messages d'alerte.</li>
+    </ul>
+
+
+
+
+    <h2>4. Utilisation <a name="utilisation"></a></h2>
+
+    <h3>4.1  Installer les dépendance:</h3>
+
+    <p>Assurez-vous d'avoir Node.js installé sur votre machine.</p>
+    <p>Vérifiez que les dépendances du backend et du frontend ont été installées en suivant les instructions de la section "Exécution" dans le fichier README.</p>
+
+    <h3>4.2  Configuration de l'Application:</h3>
+    <ul>
+        <li>Explorez les dossiers backend et frontend pour ajuster les configurations si nécessaire, comme les paramètres de connexion à la fausse API dans le backend.</li>
+    </ul>
+
+    <h3>4.3  Démarrage de l'Application:</h3>
+    <ul>
+        <li>Suivez les instructions de la section "Exécution" pour lancer le backend et le frontend de l'application.</li>
+    </ul>
+
+    <h3>4.4  Accéder à l'Interface Utilisateur:</h3>
+    <ul>
+        <li>Ouvrez votre navigateur web et accédez à l'URL suivante:</li>
+    </ul>
+    <code>http://localhost:3000</code>
+
+    <h3>4.5  Utiliser l'Application:</h3>
+    <ul>
+        <li>Sur la page d'accueil, vous trouverez la liste des fichiers existants avec des options pour les supprimer ou les télécharger.</li>
+        <li>Utilisez le formulaire sur la page pour créer un nouveau fichier. Remplissez les champs requis tels que le nom du fichier et le type de fichier (CSV, XML, Excel).</li>
+        <li>Explorez les différentes façons d'utiliser les styles en examinant les fichiers de style fournis dans le dossier styles.</li>
+    </ul>
+
+    <h3>4.6  Gestion des Messages d'Alerte:</h3>
+    <ul>
+        <li>Les messages d'alerte sont gérés avec la bibliothèque sweetalert2. Soyez attentif aux messages d'alerte pour des actions spécifiques.</li>
+    </ul>
+
+    <h3>4.7 Modification des Styles:</h3>
+    <ul>
+        <li>Les styles CSS sont définis dans les fichiers FileList.css et FileFormAddList.module.css. Pour une démonstration, le fichier FileList.tsx utilise également un style en ligne défini dans la constante modalStyle.</li>
+    </ul>
+
+    <h3>4.8  Personnalisation Additionnelle:</h3>
+    <ul>
+        <li>Explorez le code source pour comprendre et personnaliser davantage l'application selon vos besoins spécifiques.</li>
+    </ul>
+
+    <p>N'hésitez pas à explorer, créer de nouveaux fichiers, télécharger, supprimer, et observer les différentes approches de styles utilisées dans l'application.</p>
+
+    
+
+
+
+  <h2>5. Exécution <a name="exécution"></a></h2>
+
+    <h3>5.1  Installer les dépendances du Backend:</h3>
+    <ul>
+        <li>Assurez-vous d'avoir Node.js installé sur votre machine.</li>
+        <li>Naviguez vers le dossier backend de l'application.</li>
+        <li>Exécutez la commande suivante pour installer les dépendances:</li>
+    </ul>
+    <code>npm install</code>
+
+    <h3>5.1.1  Configurer le Backend:</h3>
+    <ul>
+        <li>Assurez-vous de configurer les fichiers de configuration si nécessaire, tels que les paramètres de connexion à la fausse API.</li>
+    </ul>
+
+    <h3>5.1.2  Lancer le Backend:</h3>
+    <ul>
+        <li>Exécutez la commande suivante pour démarrer le serveur backend:</li>
+    </ul>
+    <code>npm start</code>
+
+
+    <h3>5.2  Installer les dépendances du Frontend:</h3>
+    <ul>
+        <li>Naviguez vers le dossier frontend de l'application.</li>
+        <li>Exécutez la commande suivante pour installer les dépendances:</li>
+    </ul>
+    <code>npm install</code>
+
+    <h3> 5.2.1  Lancer le Frontend:</h3>
+    <ul>
+        <li>Exécutez la commande suivante pour démarrer l'application frontend:</li>
+    </ul>
+    <code>npm start</code>
+
+    <h3>5.2.2 Accéder à l'Application:</h3>
+    <ul>
+        <li>Ouvrez votre navigateur web et accédez à l'URL suivante:</li>
+    </ul>
+    <code>http://localhost:3000</code>
+
+    <p>Vous devriez maintenant pouvoir utiliser l'application de gestion de fichiers avec les fonctionnalités de création, gestion et téléchargement de fichiers dans différents formats.</p>
+
+    <p>N'hésitez pas à ajuster les ports ou les configurations selon vos besoins spécifiques.</p>
+
+
+</body>
+
+</html>
